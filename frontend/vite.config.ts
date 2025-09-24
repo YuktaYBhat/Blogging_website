@@ -6,7 +6,9 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react(),
     tailwindcss()
-  ]
+  ],
+  base: "./", // ✅ important for correct relative paths
+  build: { outDir: "dist" }
 
 
 })
